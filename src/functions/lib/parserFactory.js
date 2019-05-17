@@ -56,9 +56,11 @@ const parserFactory = () => ({
             var splited = splitContent(fragment.content)
             for (var i in splited) {
                   fragment.content = splited[i];
-                  headingCount ++;
+                  headingCount += 1;
                   // modify the id format here @jsxzljx
                   fragment.id = post.slug + '#slice-' + headingCount;
+                  // add unique objectID for overwriting  @jsxzljx
+                  fragment.objectID = post.slug + '#slice-' + headingCount;
                   index.addFragment(JSON.parse(JSON.stringify(fragment)));
             }
           }
@@ -68,7 +70,7 @@ const parserFactory = () => ({
           // add url @jsxzljx
           fragment.url = post.slug + '#' + slug(fragment.heading);
           // modify the id format here @jsxzljx
-          fragment.id = post.slug + '#slice-' + headingCount;
+          //fragment.id = post.slug + '#slice-' + headingCount;
           fragment.importance = getHeadingLevel(node.nodeName);
           fragment.post_uuid = post.uuid;
           fragment.post_title = post.title;
@@ -88,9 +90,11 @@ const parserFactory = () => ({
         var splited = splitContent(fragment.content)
         for (var i in splited) {
               fragment.content = splited[i];
-              headingCount ++;
+              headingCount += 1;
               // modify the id format here @jsxzljx
               fragment.id = post.slug + '#slice-' + headingCount;
+              // add unique objectID for overwriting  @jsxzljx
+              fragment.objectID = post.slug + '#slice-' + headingCount;
               index.addFragment(JSON.parse(JSON.stringify(fragment)));
         }
       }
