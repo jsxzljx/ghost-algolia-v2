@@ -1,0 +1,37 @@
+{
+  "name": "ghost-algolia",
+  "version": "3.1.0",
+  "description": "Provides integration between Ghost (CMS) and Algolia (search as a service)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlbrgl/ghost-algolia.git"
+  },
+  "keywords": [
+    "ghost",
+    "algolia"
+  ],
+  "author": "Matthieu Bergel <hello@matthieubergel.org> (https://www.matthieubergel.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlbrgl/ghost-algolia/issues"
+  },
+  "homepage": "https://github.com/mlbrgl/ghost-algolia#readme",
+  "dependencies": {
+    "algoliasearch": "^3.32.1",
+    "parse5": "^5.1.0",
+    "slug": "^1.0.0",
+    "striptags": "^3.1.1"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "netlify-lambda": "^1.4.3"
+  },
+  "scripts": {
+    "serve": "netlify-lambda serve --config ./webpack.functions.js src/functions ",
+    "build": "mkdir -p build/site && netlify-lambda build src/functions"
+  }
+}
