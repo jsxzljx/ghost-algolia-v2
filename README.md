@@ -1,3 +1,7 @@
+# Please use this repo: [ghost-algolia-online](https://github.com/jsxzljx/ghost-algolia-online)
+
+
+
 # Ghost / Algolia integration
 
 Enables [Ghost](https://ghost.org) sites owners to index their content through [Algolia](https://www.algolia.com).
