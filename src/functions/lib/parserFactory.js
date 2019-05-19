@@ -68,7 +68,7 @@ const parserFactory = () => ({
           headingCount += 1;
           fragment.heading = node.childNodes[0].value;
           // add url @jsxzljx
-          fragment.url = post.slug + '#' + slug(fragment.heading);
+          fragment.url = `${post.slug}#${slug(fragment.heading)}`;
           // modify the id format here @jsxzljx
           //fragment.id = post.slug + '#slice-' + headingCount;
           fragment.importance = getHeadingLevel(node.nodeName);
